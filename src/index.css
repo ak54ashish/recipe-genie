@@ -99,3 +99,13 @@
     font-family: var(--font-body);
   }
 }
+
+/* Global responsive overrides */
+html {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
