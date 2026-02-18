@@ -15,16 +15,16 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-4 text-center">
+      <section className="relative flex flex-col items-center justify-center min-h-[60vh] sm:min-h-[70vh] px-4 text-center overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 text-accent/10">
-            <Utensils className="w-32 h-32 rotate-12" />
+          <div className="absolute top-20 left-4 sm:left-10 text-accent/10">
+            <Utensils className="w-20 h-20 sm:w-32 sm:h-32 rotate-12" />
           </div>
-          <div className="absolute bottom-20 right-10 text-primary/10">
-            <Salad className="w-40 h-40 -rotate-12" />
+          <div className="absolute bottom-20 right-4 sm:right-10 text-primary/10">
+            <Salad className="w-24 h-24 sm:w-40 sm:h-40 -rotate-12" />
           </div>
-          <div className="absolute top-40 right-1/4 text-accent/5">
+          <div className="hidden sm:block absolute top-40 right-1/4 text-accent/5">
             <Soup className="w-24 h-24 rotate-45" />
           </div>
         </div>
@@ -35,13 +35,13 @@ const Index = () => {
             Discover delicious recipes
           </div>
 
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
+          <h1 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
             What's in your
             <br />
             <span className="text-accent">kitchen?</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-xl mx-auto font-body">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto font-body px-2">
             Search thousands of recipes by ingredient. Find your next favorite meal in seconds.
           </p>
 

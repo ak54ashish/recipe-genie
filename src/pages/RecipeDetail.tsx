@@ -77,7 +77,7 @@ const RecipeDetail = () => {
       </div>
 
       {/* Actions & Meta */}
-      <div className="flex flex-wrap items-center gap-4 mb-8">
+      <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 mb-8">
         <button
           onClick={() => toggleFavorite(recipe)}
           className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-body font-semibold transition-all ${
@@ -90,7 +90,7 @@ const RecipeDetail = () => {
           {isFavorite(recipe.uri) ? "Saved" : "Save"}
         </button>
 
-        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-muted-foreground">
           <span className="flex items-center gap-1"><Flame className="w-4 h-4 text-accent" />{caloriesPerServing} cal/serving</span>
           {recipe.totalTime > 0 && <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{recipe.totalTime} min</span>}
           <span className="flex items-center gap-1"><Users className="w-4 h-4" />{recipe.yield} servings</span>
