@@ -1,12 +1,15 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChefHat, Utensils, Salad, Soup } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
+import SmartSuggestions from "@/components/SmartSuggestions";
+import PopularSnacks from "@/components/PopularSnacks";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const popularSearches = ["Chicken", "Pasta", "Salmon", "Vegan", "Salad", "Tacos"];
 
 const Index = () => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const handleSearch = (query: string) => {
     navigate(`/search?q=${encodeURIComponent(query)}`);
@@ -32,24 +35,24 @@ const Index = () => {
         <div className="relative z-10 max-w-3xl mx-auto animate-fade-in">
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-body font-medium mb-6">
             <ChefHat className="w-4 h-4" />
-            Discover delicious recipes
+            {t.home.badge}
           </div>
 
           <h1 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
-            What's in your
+            {t.home.title1}
             <br />
-            <span className="text-accent">kitchen?</span>
+            <span className="text-accent">{t.home.title2}</span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto font-body px-2">
-            Search thousands of recipes by ingredient. Find your next favorite meal in seconds.
+            {t.home.subtitle}
           </p>
 
           <SearchBar onSearch={handleSearch} size="lg" />
 
           {/* Popular searches */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-            <span className="text-sm text-muted-foreground font-body">Popular:</span>
+            <span className="text-sm text-muted-foreground font-body">{t.home.popular}</span>
             {popularSearches.map((term) => (
               <button
                 key={term}
@@ -62,6 +65,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Smart Suggestions */}
+      <SmartSuggestions />
+
+      {/* Popular Snacks */}
+      <PopularSnacks />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { Heart, Clock, Flame } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getRecipeId, type Recipe } from "@/services/recipeService";
+import VegBadge from "@/components/VegBadge";
 
 interface RecipeCardProps {
   recipe: Recipe;
@@ -29,6 +30,10 @@ const RecipeCard = ({ recipe, isFavorite, onToggleFavorite, index = 0 }: RecipeC
             {recipe.cuisineType[0]}
           </span>
         )}
+        {/* Veg/Non-Veg badge on image */}
+        <div className="absolute top-3 right-3">
+          <VegBadge recipe={recipe} />
+        </div>
       </Link>
 
       {/* Content */}
