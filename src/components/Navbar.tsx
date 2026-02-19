@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Heart, ChefHat, Menu, X, CalendarDays, Globe } from "lucide-react";
+import { Heart, ChefHat, Menu, X, CalendarDays, Globe, UtensilsCrossed } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
@@ -17,6 +17,7 @@ const Navbar = () => {
     { to: "/", label: t.nav.home, icon: null },
     { to: "/favorites", label: t.nav.favorites, icon: Heart },
     { to: "/meal-planner", label: t.nav.mealPlanner, icon: CalendarDays },
+    { to: "/indian-recipes", label: lang === "hi" ? "भारतीय व्यंजन" : "Indian", icon: UtensilsCrossed },
   ];
 
   return (
