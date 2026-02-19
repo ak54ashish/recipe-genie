@@ -10,6 +10,7 @@ import SearchResults from "./pages/SearchResults";
 import RecipeDetail from "./pages/RecipeDetail";
 import Favorites from "./pages/Favorites";
 import MealPlanner from "./pages/MealPlanner";
+import IndianRecipes from "./pages/IndianRecipes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/recipe/:id" element={<RecipeDetail />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/meal-planner" element={<MealPlanner />} />
+            <Route path="/indian-recipes" element={<IndianRecipes />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
