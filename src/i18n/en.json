@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "favorites": "Favorites",
+    "mealPlanner": "Meal Planner"
+  },
+  "home": {
+    "badge": "Discover delicious recipes",
+    "title1": "What's in your",
+    "title2": "kitchen?",
+    "subtitle": "Search thousands of recipes by ingredient. Find your next favorite meal in seconds.",
+    "popular": "Popular:",
+    "smartTitle": "Smart Suggestions",
+    "smartSubtitle": "Personalized meal ideas based on your taste",
+    "snacksTitle": "Popular Snacks",
+    "snacksSubtitle": "Quick bites for every craving"
+  },
+  "search": {
+    "placeholder": "Search by ingredient... e.g. chicken, rice, tomato",
+    "button": "Search",
+    "found": "Found {count} recipes for \"{query}\"",
+    "noResults": "No recipes found for \"{query}\"",
+    "loadMore": "Load More Recipes",
+    "loading": "Loading...",
+    "noRecipesTitle": "No recipes found",
+    "noRecipesMsg": "Try searching with different ingredients"
+  },
+  "filters": {
+    "all": "All",
+    "veg": "Veg",
+    "nonVeg": "Non-Veg",
+    "snacks": "Snacks"
+  },
+  "favorites": {
+    "title": "Your Favorites",
+    "count": "{count} saved recipe(s)",
+    "empty": "No favorites yet",
+    "emptyTitle": "No favorites yet",
+    "emptyMsg": "Start exploring recipes and save your favorites!",
+    "discover": "Discover Recipes"
+  },
+  "detail": {
+    "back": "Back to results",
+    "save": "Save",
+    "saved": "Saved",
+    "calPerServing": "cal/serving",
+    "min": "min",
+    "servings": "servings",
+    "ingredients": "Ingredients",
+    "nutrition": "Nutrition",
+    "perServing": "* Per serving",
+    "viewFull": "View Full Recipe"
+  },
+  "planner": {
+    "title": "Weekly Meal Planner",
+    "subtitle": "Drag and plan your meals for the week",
+    "clear": "Clear All",
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "addMeal": "Click to add a meal",
+    "searchPlaceholder": "Search recipes to add...",
+    "noMeals": "No meals planned"
+  },
+  "suggestions": {
+    "lowBudget": "Low Budget Meals",
+    "highProtein": "High Protein Meals",
+    "weightLoss": "Weight Loss Friendly",
+    "muscleGain": "Muscle Gain Meals"
+  },
+  "badges": {
+    "veg": "Veg",
+    "nonVeg": "Non-Veg"
+  }
+}
