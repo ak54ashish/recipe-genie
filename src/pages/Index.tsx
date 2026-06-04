@@ -3,7 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { ChefHat, Utensils, Salad, Soup } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 
-const popularSearches = ["Chicken", "Pasta", "Salmon", "Vegan", "Salad", "Tacos"];
+const popularSearches: { name: string; image: string }[] = [
+  { name: "Chicken", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&h=400&fit=crop" },
+  { name: "Pasta", image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=400&fit=crop" },
+  { name: "Salmon", image: "https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400&h=400&fit=crop" },
+  { name: "Vegan", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop" },
+  { name: "Salad", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=400&fit=crop" },
+  { name: "Tacos", image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=400&fit=crop" },
+];
 
 const Index = () => {
   const navigate = useNavigate();
