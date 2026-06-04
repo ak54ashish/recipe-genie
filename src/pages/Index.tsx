@@ -3,7 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { ChefHat, Utensils, Salad, Soup } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 
-const popularSearches = ["Chicken", "Pasta", "Salmon", "Vegan", "Salad", "Tacos"];
+const popularSearches: { name: string; image: string }[] = [
+  { name: "Chicken", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&h=400&fit=crop" },
+  { name: "Pasta", image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=400&fit=crop" },
+  { name: "Salmon", image: "https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400&h=400&fit=crop" },
+  { name: "Vegan", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop" },
+  { name: "Salad", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=400&fit=crop" },
+  { name: "Tacos", image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=400&fit=crop" },
+];
 
 const Index = () => {
   const navigate = useNavigate();
@@ -47,19 +54,32 @@ const Index = () => {
 
           <SearchBar onSearch={handleSearch} size="lg" />
 
-          {/* Popular searches */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-            <span className="text-sm text-muted-foreground font-body">Popular:</span>
-            {popularSearches.map((term) => (
-              <button
-                key={term}
-                onClick={() => handleSearch(term)}
-                className="text-sm bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full font-body font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                {term}
-              </button>
-            ))}
+          {/* Popular searches with images */}
+          <div className="mt-10">
+            <p className="text-sm text-muted-foreground font-body mb-4">Popular Snacks:</p>
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4">
+              {popularSearches.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => handleSearch(item.name)}
+                  className="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"
+                >
+                  <div className="w-full aspect-square rounded-full overflow-hidden shadow-card ring-2 ring-transparent group-hover:ring-primary transition-all">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <span className="text-xs sm:text-sm font-body font-medium text-foreground group-hover:text-primary transition-colors">
+                    {item.name}
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
+
         </div>
       </section>
     </div>
